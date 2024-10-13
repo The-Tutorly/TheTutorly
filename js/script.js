@@ -94,4 +94,29 @@ document.addEventListener('DOMContentLoaded', function() {
         aboutImage.style.transform = `translateY(${scrollPosition * 0.1}px)`;
     });
 
+    const logoWrapper = document.querySelector('.logo_wrapper');
+    const brandText = document.querySelector('.brand-text');
+    const slogan = document.querySelector('.slogan');
+  
+    // Add a subtle animation on page load
+    logoWrapper.style.opacity = '0';
+    logoWrapper.style.transform = 'translateX(-20px)';
+    
+    setTimeout(() => {
+      logoWrapper.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      logoWrapper.style.opacity = '1';
+      logoWrapper.style.transform = 'translateX(0)';
+    }, 100);
+  
+    // Add hover effect
+    logoWrapper.addEventListener('mouseenter', () => {
+      brandText.style.color = '#007bff';
+      slogan.style.color = '#007bff';
+    });
+  
+    logoWrapper.addEventListener('mouseleave', () => {
+      brandText.style.color = '#333';
+      slogan.style.color = '#666';
+    });
+
 });

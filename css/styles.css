@@ -12,28 +12,137 @@
 }
 
 .logo_wrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.brand-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.slogan {
+  font-size: 0.8em;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .logo_wrapper {
+    justify-content: flex-start;
   }
-  .logo_wrapper ul {
-    margin-top: 8px ;
-    list-style: none;
+
+  .navbar-brand {
+    flex-direction: row;
     align-items: center;
   }
 
-  
-  @media (max-width: 768px) {
-    .navbar-brand {
-        flex-direction: column;
-      }
-    .navbar-brand img {
-      height: 40px;
-    }
-    .navbar-brand .brand-text {
-      font-size: 14px;
-    }
+  .logo-img {
+    height: 30px;
+    margin-right: 5px;
   }
 
+  .brand-text-container {
+    flex-direction: column;
+  }
+
+  .brand-text {
+    font-size: 0.9em;
+  }
+
+  .slogan {
+    font-size: 0.6em;
+  }
+  #carouselExampleIndicators .carousel-item img {
+    height: 150px; /* Reduced height for smaller screens */
+}
+.stat-item {
+  padding: 1rem 0.25rem;
+}
+
+.stat-item i {
+  font-size: 1.5rem;
+}
+
+.stat-item h3 {
+  font-size: 1.25rem;
+}
+
+.stat-item p {
+  font-size: 0.9rem;
+  font-weight: bold !;
+}
+
+.testimonial-card {
+  flex: 0 0 calc(50% - 20px);
+}
+
+}
+
+@media (max-width: 480px) {
+
+  .stat-item {
+    padding: 0.75rem 0.1rem;
+}
+
+.stat-item i {
+    font-size: 1.25rem;
+}
+
+.stat-item h3 {
+    font-size: 1rem;
+}
+
+.stat-item p {
+    font-size: 0.6rem;
+}
+
+  .logo-img {
+    height: 25px;
+  }
+
+
+  .brand-text {
+    font-size: 0.8em;
+  }
+
+  .slogan {
+    font-size: 0.5em;
+  }
+  .carousel-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+}
+
+.prev-btn {
+    left: -15px;
+}
+
+.next-btn {
+    right: -15px;
+}
+
+}
 .navbar .container .navbar-brand img {
     border-radius: 50% !important;
     height: 70px !important;
@@ -51,13 +160,7 @@
     font-weight: bold;
     color: black;
 }
-  .logo
-  {
-    border-radius: 50% !important;
-    height: 70px !important;
-    width: 70px !important;
-   
-  }
+
 .navbar-nav .nav-link:hover {
     color: #17a2b8 !important;
 }
@@ -66,10 +169,7 @@
     background-color: #f8f9fa;
     padding: -2px;
 }
-.brand-text {
-  font-size: 1.5em; /* increase the font-size to 20px */
-  font-weight: bold; /* make the text bold */
-}
+
   .navbar-brand {
     margin-right: -20px; /* reduce the margin-right to 5px */
   }
@@ -79,13 +179,6 @@
     object-fit: cover; /* Ensures the image covers the area without distortion */
  
 }
-
-@media (max-width: 768px) {
-    #carouselExampleIndicators .carousel-item img {
-        height: 150px; /* Reduced height for smaller screens */
-    }
-}
-
 
 
 .stats-section {
@@ -141,43 +234,7 @@
   color: #6c757d;
 }
 
-@media (max-width: 768px) {
-  .stat-item {
-      padding: 1rem 0.25rem;
-  }
-
-  .stat-item i {
-      font-size: 1.5rem;
-  }
-
-  .stat-item h3 {
-      font-size: 1.25rem;
-  }
-
-  .stat-item p {
-      font-size: 0.9rem;
-      font-weight: bold !;
-  }
-}
-
-@media (max-width: 480px) {
-  .stat-item {
-      padding: 0.75rem 0.1rem;
-  }
-
-  .stat-item i {
-      font-size: 1.25rem;
-  }
-
-  .stat-item h3 {
-      font-size: 1rem;
-  }
-
-  .stat-item p {
-      font-size: 0.6rem;
-  }
-}
-
+/* Testimonial section */
 .testimonials-section {
   background-color: #f8f9fa;
   padding: 4rem 0;
@@ -266,27 +323,6 @@ h2 {
   right: -20px;
 }
 
-@media (max-width: 768px) {
-  .testimonial-card {
-      flex: 0 0 calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .carousel-btn {
-      width: 30px;
-      height: 30px;
-      font-size: 1rem;
-  }
-
-  .prev-btn {
-      left: -15px;
-  }
-
-  .next-btn {
-      right: -15px;
-  }
-}
 
 #about {
   position: relative;
@@ -353,7 +389,7 @@ footer a:hover {
 .whatsapp-btn {
     position: fixed;
     right: 20px;
-    top: 90%;
+    top: 80%;
     transform: translateY(-50%);
     width: 60px;
     height: 60px;
