@@ -1,6 +1,9 @@
 /* Custom styles for TheTutor website */
 
 
+.navbar {
+  background-color: #c2cbce; /* light blue */
+}
 
 .navbar-nav .nav-link {
     color: #302c2c !important;
@@ -46,6 +49,18 @@
   color: #666;
 }
 
+
+ /* Responsive styles */
+ @media (max-width: 600px) {
+  .stat-item {
+      flex: 1 1 calc(50% - 10px); /* Two items per row */
+  }
+}
+@media (max-width: 400px) {
+  .stat-item {
+      flex: 1 1 100%; /* One item per row */
+  }
+}
 @media (max-width: 768px) {
   .logo_wrapper {
     justify-content: flex-start;
@@ -76,7 +91,7 @@
     height: 150px; /* Reduced height for smaller screens */
 }
 .stat-item {
-  padding: 1rem 0.25rem;
+  padding: 1rem 0.20rem;
 }
 
 .stat-item i {
@@ -91,10 +106,15 @@
   font-size: 0.9rem;
   font-weight: bold !;
 }
-
 .testimonial-card {
   flex: 0 0 calc(50% - 20px);
 }
+.footer .col-md-4 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+
 
 }
 
@@ -141,6 +161,23 @@
 .next-btn {
     right: -15px;
 }
+.stats-section {
+  background-color: #f8f9fa;
+  padding: 1.5rem 0;
+
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 1.5rem 0.5rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 0.5rem;
+}
+
 
 }
 .navbar .container .navbar-brand img {
@@ -233,7 +270,6 @@
   font-size: 0.9rem;
   color: #6c757d;
 }
-
 /* Testimonial section */
 .testimonials-section {
   background-color: #f8f9fa;
@@ -425,4 +461,19 @@ footer a:hover {
         width: 30px;
         height: 30px;
     }
+}
+
+@media (max-width: 576px) {
+  footer {
+      padding: 2rem 0;
+  }
+  footer h3 {
+      font-size: 1.5rem;
+  }
+  footer p, footer a {
+      font-size: 0.9rem;
+  }
+  .social-icons a {
+      font-size: 1.5rem;
+  }
 }
