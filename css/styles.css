@@ -53,6 +53,9 @@
  /* Responsive styles */
 @media (max-width: 768px) {
 
+  #header a {
+    font-size: 14px; /* Decrease font size for small screens */
+  }
   .container {
     padding: 0 20px; /* Adjust this value as needed */
   }
@@ -138,6 +141,10 @@
 
 @media (max-width: 480px) {
 
+  /* .whatsapp-btn {
+    margin-right: 10PX;
+} */
+
   .stat-item {
     flex: 0 0 100%;
     margin: 0.5rem 0;
@@ -190,7 +197,7 @@
 .stat-item {
   flex: 1;
   text-align: center;
-  padding: 1.5rem 0.5rem;
+  /* padding: 1.5rem 0.5rem; */
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -232,9 +239,17 @@
   }
 #carouselExampleIndicators .carousel-item img {
    
-    height: 400px; /* Fixed height for larger screens */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    
+    width: 700px;
+      height: 400px; /* Fixed height for larger screens */
+      object-fit: cover; /* Ensures the image covers the area without distortion */ 
  
+}
+
+.carousel-inner .carousel-caption .carousel-inner .logo-uprimg
+{
+  height: 25px;
+  width: auto;
 }
 
 
@@ -475,6 +490,7 @@ footer a:hover {
         width: 50px;
         height: 50px;
         right: 15px;
+        margin-right: 10PX
     }
 
     .whatsapp-icon {
