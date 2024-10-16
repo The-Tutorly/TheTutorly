@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let cardsPerView = window.innerWidth <= 768 ? 2 : 4;
 
     function updateCarousel() {
-        const cardWidth = cards[0].offsetWidth + 20; // 20px for margins
+        const cardWidth = cards[0].offsetWidth + 5; // 20px for margins
         track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
 
