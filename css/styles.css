@@ -140,18 +140,25 @@
   font-size: 0.9rem;
 }
 
-#about {
-  padding: 2rem 15px;
-}
+
 
 .footer .col-md-4 {
   flex: 0 0 100%;
   max-width: 100%;
 }
 
-
-
+.about-image-wrapper {
+  max-width: 90%;
 }
+
+#about h2 {
+  font-size: 1.8rem;
+}
+}
+
+
+
+
 
 
 @media (max-width: 480px) {
@@ -256,9 +263,9 @@
 #carouselExampleIndicators .carousel-item img {
    
     
-    width: 700px;
-      height: 400px; /* Fixed height for larger screens */
-      object-fit: cover; /* Ensures the image covers the area without distortion */ 
+    width: 500px;
+    height: 300px; /* Fixed height for larger screens */
+    /* object-fit: cover;   */
  
 }
 
@@ -354,22 +361,7 @@
   color: #7c77aa; /* change color on hover */
 }
 
-#about h2{
-  margin-top: 10px;
-  font-weight: bold;
-  text-transform: uppercase; /* make text full capital */
-  color: #333; /* default color */
-  transition: color 0.3s ease; /* add transition effect for smooth color change */
-}
 
-#about h2:hover {
-  color: #7c77aa; /* change color on hover */
-}
-#about p
-{
-  text-align: justify;
-  font-family: 'Times New Roman', Times, serif;
-}
 
 /* Testimonial section */
 .testimonials-section {
@@ -384,10 +376,13 @@
   position: relative;
 }
 
-h2 {
+.testimonials-section h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
   color: #333;
+  margin-bottom: 2rem;
+  
 }
 
 .testimonials-carousel {
@@ -464,19 +459,64 @@ h2 {
 #about {
   position: relative;
   overflow: hidden;
+  padding: 60px 0;
 }
 
-.about-image-container {
+.about-image-wrapper {
   position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
-.about-image-container:hover {
-  transform: scale(1.05);
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
+.about-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+#about h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  transition: color 0.3s ease;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#about h2:hover {
+  color: #7c77aa;
+}
+
+#about p {
+  text-align: justify;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.learn-more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.learn-more-content.show {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+}
+
 
 .floating-shape {
   position: absolute;
@@ -494,18 +534,11 @@ h2 {
   50% { transform: translateY(-20px) rotate(10deg); }
 }
 
-@media (max-width: 991px) {
-  .about-image-container {
-      max-width: 80%;
-      margin: 0 auto;
-  }
-}
 
-@media (max-width: 767px) {
-  .about-image-container {
-      max-width: 100%;
-  }
-}
+
+
+
+
 
 /* Footer styles */
 

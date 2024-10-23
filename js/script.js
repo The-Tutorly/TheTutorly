@@ -67,24 +67,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateCarousel();
     const aboutSection = document.getElementById('about');
-    const aboutImage = aboutSection.querySelector('img');
+    const aboutImage = aboutSection.querySelector('.about-image');
+    const learnMoreBtn = document.getElementById('learnMoreBtn');
+    const learnMoreContent = document.getElementById('learnMoreContent');
+    let isExpanded = false;
 
+    // Learn More button functionality
+    learnMoreBtn.addEventListener('click', function() {
+        isExpanded = !isExpanded;
+        learnMoreContent.classList.toggle('show');
+        learnMoreBtn.textContent = isExpanded ? 'Show Less' : 'Learn More';
+    });
+
+    // Scroll animation
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0 &&
+            rect.left <= (window.innerWidth || document.documentElement.clientWidth) &&
+            rect.right >= 0
         );
     }
 
-    function handleScroll() {
-        if (isInViewport(aboutImage)) {
-            aboutImage.style.animation = 'fadeInUp 1s ease-out forwards';
+    // Check if element is in viewport on scroll
+    window.addEventListener('scroll', function() {
+        if (isInViewport(aboutSection)) {
+            aboutSection.classList.add('animate');
         }
-    }
+    });
 
+    // Initial check
+    if (isInViewport(aboutSection)) {
+        aboutSection.classList.add('animate');
+    }
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check initial state
 
