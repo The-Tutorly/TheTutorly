@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // New WhatsApp button functionality
     const whatsappBtn = document.getElementById('whatsappBtn');
     const phoneNumber = '+923155171825'; // Replace with your WhatsApp number
-    const message = 'Hi welcome to TheTutorly. Experienced the best of personalised learning with us.How can we help you today  !'; // Optional: Pre-filled message
+    const message = 'Hi welcome to TheTutorly.!'; // Optional: Pre-filled message
 
     if (whatsappBtn) {
         whatsappBtn.addEventListener('click', function(e) {
